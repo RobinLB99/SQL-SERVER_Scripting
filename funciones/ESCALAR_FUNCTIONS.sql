@@ -1,0 +1,22 @@
+/* Funcion escalares */
+
+CREATE FUNCTION CalcularIVA (@Precio MONEY)
+RETURNS MONEY
+AS
+BEGIN
+	DECLARE @IVA MONEY 
+	SET @IVA = @Precio * 0.15
+	RETURN @IVA
+END
+GO
+
+CREATE FUNCTION PrecioFinal (@Precio MONEY)
+RETURNS MONEY
+AS
+BEGIN
+	DECLARE @IVA MONEY
+	SET @IVA = @Precio * 0.15
+	RETURN @Precio + @IVA
+END
+GO
+
