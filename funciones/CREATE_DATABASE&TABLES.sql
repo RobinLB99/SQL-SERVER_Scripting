@@ -9,9 +9,10 @@ GO
 CREATE TABLE [Productos] (
 	[ProductoID] BIGINT IDENTITY(1,1) PRIMARY KEY,
 	[NombreProducto] VARCHAR(30) NOT NULL,
-	[PrecioProducto] DECIMAL(5,2) NOT NULL
+	[PrecioProducto] DECIMAL(5,2) NOT NULL,
+  [StockProducto] INT NOT NULL
 )
-GO
+GO                          
 
 CREATE TABLE [Clientes] (
 	[ClienteID] BIGINT IDENTITY(1,1) PRIMARY KEY,
@@ -21,11 +22,11 @@ CREATE TABLE [Clientes] (
 )
 GO
 
-INSERT INTO [Productos] (NombreProducto, PrecioProducto)
+INSERT INTO Productos (NombreProducto, PrecioProducto, StockProducto)
 VALUES
-('Shampoo 1L', 10.57),
-('Jabon 300g', 2.25),
-('Pasta dental 300g', 1.32)
+('Shampoo 1L', 10.57, 20),
+('Jabon 300g', 2.25, 20),
+('Pasta dental 300g', 1.32, 20)
 GO
 
 INSERT INTO [Clientes] (Nombres, Apellidos, Ciudad)
