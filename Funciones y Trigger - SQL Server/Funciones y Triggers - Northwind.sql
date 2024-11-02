@@ -1,4 +1,7 @@
-﻿/* 1. Crea una función que reciba el Id de un empleado (Employee) y que 
+﻿USE Northwind;
+GO
+
+/* 1. Crea una función que reciba el Id de un empleado (Employee) y que 
 regrese el total de órdenes que ha generado.*/
 CREATE FUNCTION NumOrdersByEmployees (@ID_Employee INT)
 RETURNS INT

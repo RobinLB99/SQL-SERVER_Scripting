@@ -1,4 +1,7 @@
-﻿DECLARE @ID_Employee INT = 5
+﻿USE Northwind;
+GO
+
+DECLARE @ID_Employee INT = 5
 SELECT EmployeeID, FirstName, LastName, dbo.NumOrdersByEmployees(@ID_Employee) AS NumOrders 
 FROM Employees 
 WHERE EmployeeID = @ID_Employee
